@@ -1,0 +1,98 @@
+#div1{
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    transform: rotate(0deg);
+    background-color: red;
+    color: white;
+    transition-property:transform, background-color;
+    transition-duration:2s, 2s;
+    transition-timing-function: linear,linear;
+    transition-delay: 0s 0s;
+}
+
+#div1:hover{
+    background-color: green;
+    transform: rotateZ(90deg);
+}
+
+@keyframes animateRotation{
+    0%{
+        transform: rotateZ(0deg);
+    }
+
+    25%{
+        transform: rotateZ(90deg);
+    }
+
+    50%{
+        transform: rotateZ(180deg);
+    }
+
+    75%{
+        transform: rotateZ(270deg);
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+
+}
+
+@keyframes animateBgcolor{
+    0%{
+        background-color: white;
+    }
+
+    25%{
+        background-color: red;
+    }
+
+    50%{
+        background-color: green;
+    }
+
+    75%{
+        background-color: blue;
+    }
+
+    100%{
+        background-color: white;
+    }
+
+}
+
+
+#div2{
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+
+    animation-name:animateRotation,animateBgcolor;
+    animation-duration: 4s,4s;
+    animation-timing-function: linear,linear;
+    animation-delay: 0s,0s;
+    animation-iteration-count: 5,5;
+    animation-direction: normal,normal;
+}
+
+.text{
+    gap: 10rem;
+    display: flex;
+}
+
+div#wrapper{
+    position: relative;
+    border: 2px solid red;
+    height: 200px;
+    top: 100px;
+}
+
+div#div1{
+    position: relative;
+    border:2px solid blue;
+    width: 100px;
+    height: 100px;
+    
+}
+
